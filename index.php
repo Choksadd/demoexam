@@ -230,7 +230,39 @@ section div > div:hover {
   </div>
 </header>
 
+<!-- Слайдер с картинками -->
+<div class="slideshow-container">
+  <!-- Слайды -->
+  <div class="mySlides fade">
+    <img src="slider_1.jpg" alt="Слайд 1">
+    <div class="text">Курсы повышения квалификации</div>
+  </div>
 
+  <div class="mySlides fade">
+    <img src="slider_2.jpg" alt="Слайд 2">
+    <div class="text">Курсы переподготовки</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="slider_3.png" alt="Слайд 3">
+    <div class="text">Курсы по охране труда</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="slider_4.jpg" alt="Слайд 4">
+    <div class="text">Изучение нового</div>
+  </div>
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+
+<!-- Точки навигации -->
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
 <!-- Основной контент -->
 <section style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
   <h2 style="text-align: center; color: var(--silver); margin-bottom: 30px;">Почему выбирают нас?</h2>
