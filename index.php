@@ -332,7 +332,23 @@ if (slideshowContainer) {
     }, 3000);
   });
 }
-
+        // Создание анимированных ромбо на фоне
+        function createDiamonds() {
+            for (let i = 0; i < 10; i++) {
+                const diamond = document.createElement('div');
+                diamond.className = 'diamond';
+                const size = Math.random() * 100 + 50;
+                diamond.style.width = size + 'px';
+                diamond.style.height = size + 'px';
+                diamond.style.left = Math.random() * 100 + '%';
+                diamond.style.bottom = '-' + size + 'px';
+                diamond.style.animationDuration = Math.random() * 15 + 10 + 's';
+                diamond.style.animationDelay = Math.random() * 5 + 's';
+                document.body.appendChild(diamond);
+            }
+        }
+        
+        createDiamonds();
 </script>
 </body>
 </html>
