@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: MySQL-8.4:3306
--- Время создания: Июн 04 2026 г., 09:22
+-- Время создания: Июн 04 2026 г., 11:30
 -- Версия сервера: 8.4.6
 -- Версия PHP: 8.4.13
 
@@ -37,6 +37,13 @@ CREATE TABLE `request` (
   `review` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Дамп данных таблицы `request`
+--
+
+INSERT INTO `request` (`id`, `user_id`, `date`, `status`, `curses`, `payment`, `review`) VALUES
+(1, 3, '2026-06-05 10:34:00', 'Новая', 'Курсы повышения квалификации', 'перевод', 'Хотелось бы иметь специалиста с высшим образованием');
+
 -- --------------------------------------------------------
 
 --
@@ -61,7 +68,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `fullname`, `phone`, `email`, `login`, `password`, `is_admin`, `created_at`, `review`) VALUES
 (1, 'admin', '+7(123)-456-78-90', 'admin@mail.ru', 'Admin26', 'Demo20', 1, '2026-06-03 06:21:23', NULL),
-(2, 'Иванов Иван Иванович', '+7(123)123-12-12', 'ivanov@mail.ru', 'ivan123', '12345678', 0, '2026-06-04 06:22:20', NULL);
+(2, 'Иванов Иван Иванович', '+7(123)123-12-12', 'ivanov@mail.ru', 'ivan123', '12345678', 0, '2026-06-04 06:22:20', NULL),
+(3, 'test test test', '+7(123)123-12-12', 'test@mail.com', 'test123', '12345678', 0, '2026-06-04 07:22:01', NULL);
 
 --
 -- Индексы сохранённых таблиц
@@ -89,13 +97,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `request`
 --
 ALTER TABLE `request`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
