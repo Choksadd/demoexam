@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: MySQL-8.4:3306
--- Время создания: Июн 04 2026 г., 09:19
+-- Время создания: Июн 04 2026 г., 09:22
 -- Версия сервера: 8.4.6
 -- Версия PHP: 8.4.13
 
@@ -54,6 +54,14 @@ CREATE TABLE `users` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `review` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `users`
+--
+
+INSERT INTO `users` (`id`, `fullname`, `phone`, `email`, `login`, `password`, `is_admin`, `created_at`, `review`) VALUES
+(1, 'admin', '+7(123)-456-78-90', 'admin@mail.ru', 'Admin26', 'Demo20', 1, '2026-06-03 06:21:23', NULL),
+(2, 'Иванов Иван Иванович', '+7(123)123-12-12', 'ivanov@mail.ru', 'ivan123', '12345678', 0, '2026-06-04 06:22:20', NULL);
 
 --
 -- Индексы сохранённых таблиц
